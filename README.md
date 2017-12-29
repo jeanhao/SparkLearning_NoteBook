@@ -1,9 +1,13 @@
 # SparkLearning_NoteBook README
-## 基本描述
+
+## 一、目录
+[TOC]
+
+## 二、项目描述
 1. 基于Spark的学习实践笔记，内附jupyter notebook实践,可以根据里面的一步步操作学习Spark RDD的基本API操作、Spark MLlib 相关操作和Spark实践Demo等。
 2. 本项目配有完整依赖环境的实战Docker镜像，具体Docker Hub路径为：https://hub.docker.com/r/jeanheodh/pyspark_env/。环境配置步骤课参考镜像仓库的Description。
 
-# 项目目录介绍
+## 三、项目目录介绍
 项目路径树形结构展示如下：
 > ├── completed_notebook # 完整代码实践的notebook展示
 │   ├── L01_SparkRDDAPIPractice.ipynb
@@ -26,13 +30,30 @@
 │   ├── L05_ItemBaseCollaborativeFiltering.ipynb
 │   └── L06_SparkALSCollaborativeFiltering
 
-# notebook内容介绍
-## L01 SparkRDDAPIPractice
+## 四、notebook内容介绍
+### L01 SparkRDDAPIPractice
+#### 1. 相关概念
 
+#### 2. 实战演练
 
-## L02_SparkMapReducePractice
-## L03_SparkMLLibPractice
-## L04_UserBaseCollaborativeFiltering
-## L05_ItemBaseCollaborativeFiltering
-## L06_SparkALSCollaborativeFiltering
+### L02_SparkMapReducePractice
+#### 1. 相关概念
+#### 2. 实战演练
+
+### L03_SparkMLLibPractice
+#### 1. 相关概念
+#### 2. 实战演练
+
+### L04_UserBaseCollaborativeFiltering
+#### 1. 相关概念
+#### 2. 实战演练
+
+### L05_ItemBaseCollaborativeFiltering
+#### 1. 相关概念
+#### 2. 实战演练
+
+### L06_SparkALSCollaborativeFiltering
+#### 1. 相关概念
+#### 2. 实战演练
+
 
