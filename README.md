@@ -22,7 +22,7 @@
 │   ├── L03_SparkMLLibPractice.ipynb
 │   ├── L04_UserBaseCollaborativeFiltering.ipynb
 │   ├── L05_ItemBaseCollaborativeFiltering.ipynb
-│   └── L06_SparkALSCollaborativeFiltering
+│   └── L06_SparkALSCollaborativeFiltering.ipynb
 ├── data # 测试代码用到的相关数据集
 │   ├── ……
 ├── pysrc # notebook配套py源码
@@ -65,21 +65,27 @@ Spark MLlib提供了很多常用的数据挖掘和机器学习算法，便于我
 
 ### L04_UserBaseCollaborativeFiltering
 #### 1. 相关概念
-我们可以通过下面的动态gif图对协同过滤的推荐算法建立更直观的认识：
+1. 我们可以通过下面的动态gif图对协同过滤的推荐算法建立更直观的认识：
 ![collaborative filtering](https://upload.wikimedia.org/wikipedia/commons/5/52/Collaborative_filtering.gif)
-#### 2. 实战演练
-在本节中，会进行step by step的基于用户的协同过滤算法的实践。
-### L05_ItemBaseCollaborativeFiltering
-#### 1. 相关概念
+
+2. 基于用户的协同过滤算法就是根据不同用户对不同物品的评分，选取特定的相似度算法，计算不同用户之间的相似度，再根据相似度高低排序，选取相似度top k的用户进行推荐。而推荐的逻辑是根据这些高相似度用户对待推荐物品的评分和相似度加权，算出一个预测的推荐评分，根据这个评分高低进行推荐
 
 #### 2. 实战演练
-在本节中，会进行step by step的基于项的协同过滤算法的实践。
+在本节中，会进行step by step的基于用户的协同过滤算法的实践。下面是算法实现的逻辑流程图：
+![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/images/UserBase_FlowChart.png)
+### L05_ItemBaseCollaborativeFiltering
+#### 1. 相关概念
+不同于基于用户的协同过滤算法需要算出不同用户的相似度，基于项的思路是根据不同用户的评分算出不同物品的相似度，再遍历用户未看过的电影A(1...a)，根据用户看过电影B(1..b)的评分加权于用户未看过电影的相似度再求和，得到对未看过的电影的推荐度预测
+
+#### 2. 实战演练
+在本节中，会进行step by step的基于项的协同过滤算法的实践。下面是算法实现的逻辑流程图：
+![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/images/ItemBase_FlowChart.png)
 ### L06_SparkALSCollaborativeFiltering
 #### 1. 相关概念
 Spark MLlib内置了基于ALS(交替最小二乘法)的推荐模型算法，我们可以方便地通过Spark的相关API实现一个基于模型的实时推荐系统。
 #### 2. 实战演练
-目前在本部分，提供了基于ALS代码的详细实现和注解，大家可以通过阅读和运行代码来了解Spark如何通过数据构建、训练机器学习的模型，并结合模型进行数据分析和预测。
-
+目前在本部分，提供了基于ALS代码的详细实现和注解，大家可以通过阅读和运行代码来了解Spark如何通过数据构建、训练机器学习的模型，并结合模型进行数据分析和预测。下面是整个推荐系统搭建的逻辑流程图：
+![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/images/ALS_FlowChart.png)
 
 ## 五、参考
 1. https://github.com/jadianes/spark-movie-lens
