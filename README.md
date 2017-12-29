@@ -1,3 +1,5 @@
+# SparkLearning_NoteBook README
+
 ## 一、目录
 [TOC]
 
@@ -70,20 +72,20 @@ Spark MLlib提供了很多常用的数据挖掘和机器学习算法，便于我
 
 #### 2. 实战演练
 在本节中，会进行step by step的基于用户的协同过滤算法的实践。下面是算法实现的逻辑流程图：
-![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/images/UserBase_FlowChart.png)
+![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/blob/master/images/UserBase_FlowChart.png?raw=true)
 ### L05_ItemBaseCollaborativeFiltering
 #### 1. 相关概念
 不同于基于用户的协同过滤算法需要算出不同用户的相似度，基于项的思路是根据不同用户的评分算出不同物品的相似度，再遍历用户未看过的电影A(1...a)，根据用户看过电影B(1..b)的评分加权于用户未看过电影的相似度再求和，得到对未看过的电影的推荐度预测
 
 #### 2. 实战演练
 在本节中，会进行step by step的基于项的协同过滤算法的实践。下面是算法实现的逻辑流程图：
-![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/images/ItemBase_FlowChart.png)
+![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/blob/master/images/ItemBase_FlowChart.png?raw=true)
 ### L06_SparkALSCollaborativeFiltering
 #### 1. 相关概念
 Spark MLlib内置了基于ALS(交替最小二乘法)的推荐模型算法，我们可以方便地通过Spark的相关API实现一个基于模型的实时推荐系统。
 #### 2. 实战演练
 目前在本部分，提供了基于ALS代码的详细实现和注解，大家可以通过阅读和运行代码来了解Spark如何通过数据构建、训练机器学习的模型，并结合模型进行数据分析和预测。下面是整个推荐系统搭建的逻辑流程图：
-![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/images/ALS_FlowChart.png)
+![collaborative filtering](https://github.com/jeanhao/SparkLearning_NoteBook/blob/master/images/ALS_FlowChart.png?raw=true)
 
 ## 五、参考
 1. https://github.com/jadianes/spark-movie-lens
