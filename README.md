@@ -9,7 +9,8 @@
 
 ## 三、项目目录介绍
 项目路径树形结构展示如下：
-> ├── completed_notebook # 完整代码实践的notebook展示
+```python
+├── completed_notebook # 完整代码实践的notebook展示
 │   ├── L01_SparkRDDAPIPractice.ipynb
 │   ├── L02_SparkMapReducePractice.ipynb
 │   ├── L03_SparkMLLibPractice.ipynb
@@ -29,7 +30,8 @@
 │   ├── L04_UserBaseCollaborativeFiltering.ipynb
 │   ├── L05_ItemBaseCollaborativeFiltering.ipynb
 │   └── L06_SparkALSCollaborativeFiltering
-
+```language
+```
 ## 四、notebook内容介绍
 ### L01 SparkRDDAPIPractice
 #### 1. 相关概念
