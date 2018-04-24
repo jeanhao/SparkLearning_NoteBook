@@ -6,12 +6,9 @@
 ## 二、项目描述
 1. 基于Spark的学习实践笔记，内附jupyter notebook实践,可以根据里面的一步步操作学习Spark RDD的基本API操作、Spark MLlib 相关操作和Spark实践Demo等。
 2. 本项目配有完整依赖环境的实战Docker镜像，具体Docker Hub路径为：`https://hub.docker.com/r/jeanheodh/pyspark_env/` 。环境配置步骤如下：
-	1. 后台运行镜像`docker run -d -p 23333:23333 --name ${container_name} jeanheodh/pyspark_env /sbin/init`
-		> 其中container_name是当前容器的名字，后面会复用
-
-	2. 进入docker容器：成功启动后，可通过`docker exec -it ${container_name} bash`进入容器
-    3. 切换到notebook所在路径:`cd /root/notebook`,可通过`git pull `检测仓库是否有更新
-    4. 启动jupyter notebook进程，可通过运行alias命令：`junb`直接启动notebook,进程监听0.0.0.0:23333，通过映射到本地23333端口，可在本地图形化界面下通过游览器访问localhost:23333访问notebook内容。
+	1. 后台运行镜像`docker run -d -p 23333:23333 --name notebook -w /root/notebook jeanheodh/pyspark_env jupyter notebook --ip=0.0.0.0 --allow-root --port=23333`
+	2. 运行后可通过容器宿主机ip:23333当问notebook网页，若需要密码，输入`qwe123456`
+		
 
 ## 三、项目目录介绍
 项目路径树形结构展示如下：
